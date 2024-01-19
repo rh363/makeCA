@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#inst-k3s-client V1.0
+#makeCA V1.0
 #Author: RH363
 #Date: 10/01/2024
 
