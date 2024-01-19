@@ -86,18 +86,18 @@ case "$(lsb_release -is)" in
 
     ;;
 esac
-echo "${Blue}CREATE KEY${Color_Off}"
+echo -e "${Blue}CREATE KEY${Color_Off}"
 openssl genrsa -aes256 -out "$CANAME/$CANAME".key "$DAYS"
 if [ $? != 0 ];then
     rm -rf "$CANAME"
     exit
 fi
-echo "${Blue}KEY CREATED${Color_Off}"
-echo "${Blue}CREATE CA CERT${Color_Off}"
+echo -e "${Blue}KEY CREATED${Color_Off}"
+echo -e "${Blue}CREATE CA CERT${Color_Off}"
 openssl req -x509 -new -nodes -key "$CANAME/$CANAME".key -sha256 -days "$DAYS" -out "$CANAME/$CANAME".crt
 if [ $? != 0 ];then
     rm -rf "$CANAME"
     exit
 fi
-echo "${Blue}CA CERT CREATED${Color_Off}"
+echo -e "${Blue}CA CERT CREATED${Color_Off}"
 cp "$CANAME/$CANAME".crt "$CANAME/$CANAME.pem"
