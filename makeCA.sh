@@ -27,7 +27,7 @@ usage() {
  echo -e "${Blue} INFO ${Color_Off}"
  echo "Options:"
  echo " -h, --help            Display this help message"
- echo ' -c, --ca              CA NAME(DEFAULT="serverca") Define CA cert name '
+ echo ' -c, --ca              CA NAME(DEFAULT="serverCA") Define CA cert name '
  echo " -d, --days            DAYS(DEFAULT=4096) Define how much days this cert must be valid"
 }
 
